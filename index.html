@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misixxx site</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./assets/images/Icon2.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cairo:wght@300&family=Carter+One&family=Caveat&family=Cookie&family=DM+Mono:wght@300&family=Mali:wght@500&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <title>Misixx</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 <body>
-    <div class="flex1 container">
-        <div class="links">
-            <header>
-                <a href=""><i class="fa-solid fa-images"></i> Photo Gallery</a>
-                <a href="">Home</a>
-                <a href="">Tours</a>
-                <a href="">Contacts</a>
-                <a href="">About</a>
-            </header>
-        </div>
+    <div id="tsparticles"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    <button id="themeToggle" class="btn btn-outline-secondary">
+                        <i id="themeIcon" class="fas fa-moon"></i>
+                    </button>
+                    <input type="color" id="colorPicker" value="#FFFFFF">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
         <article>
             <h1>Photo Gallery</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quibusdam, officia earum porro modi consectetur vitae veritatis veniam nostrum accusantium natus ad velit iure suscipit id possimus nam. Dolor assumenda impedit eos officiis aut laborum, veritatis voluptatem corporis molestiae placeat exercitationem explicabo odit itaque dolore debitis labore aliquam saepe sit?</p>
@@ -35,9 +54,12 @@
                 <img src="assets/images/pic.jpg" alt="">
             </div>
         </article>
-        <footer>
-            <a href="">PHOTO GALLERY 2024</a>
-        </footer>
-    </div>
+    </main>
+    <footer>
+        <a href="#">PHOTO GALLERY 2024</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/test-parallax.js"></script>
 </body>
 </html>

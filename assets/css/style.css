@@ -6,42 +6,154 @@ body {
     box-sizing: border-box;
 }
 
-div {
-    margin-top: 10px;
+body.dark-theme {
+    background-color: #222;
+    color: #fff;
 }
 
-h1,p,.p1,a {
-    text-align: justify;
-    font-family: 'Mali';
+img {
+    border: 40px solid white;
 }
 
-.p1 {
-    text-align: justify;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
+body, .navbar, header, .nav-link, .navbar-brand i {
+    transition: all 0.8s ease;
 }
 
-h1 {
-    font-size: 40px;
-    color: rgb(0, 0, 0);
+.navbar-collapse {
+    transition: all 0.5s ease;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    gap: 15px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.180);
 }
 
-header > a:first-child {
-    font-size: 40px;
-    margin-right: auto;
+/* Навигационные ссылки (светлая тема) */
+.nav-link {
+    color: #000; /* Основной цвет ссылок */
+    font-weight: bold; /* Толщина шрифта */
+    transition: color 0.3s; /* Плавный переход цвета */
 }
 
-a {
-    text-decoration: none;
+.nav-link:hover {
+    color: #0077ff; /* Цвет при наведении */
+}
+
+.nav-link.active {
+    color: #0093e2; /* Цвет активной ссылки */
+}
+
+/* Навигационные ссылки (темная тема) */
+body.dark-theme .nav-link {
+    color: #fff; /* Основной цвет ссылок в темной теме */
+}
+
+body.dark-theme .nav-link:hover {
+    color: #f0f0f0; /* Цвет при наведении в темной теме */
+}
+
+body.dark-theme .nav-link.active {
+    color: #87ceeb; /* Цвет активной ссылки в темной теме */
+}
+
+.container {
+    min-width: 1000px;
+    width: 70vw;
+    margin: 0 auto;
+    min-height: 1600px;
+    font-size: 18px;
+}
+
+.dark-theme-header {
+    background-color: #000000;
+    color: white;
+    border-bottom-color: #333;
+}
+
+.dark-theme-text {
+    color: white;
+}
+.dark-theme-icon {
+    color: white;
+}
+
+.dark-theme-button {
+    background-color: rgb(255, 255, 255);
     color: black;
+}
+
+#colorPicker {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 38px;
+    padding: 0px;
+}
+
+#tsparticles {
+    position: absolute;
+    z-index: -1;
+}
+
+main {
+    display: grid;
+    padding: 20px;
+    justify-content: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+.text {
+    font-size: 25px;
+    color: black;
+}
+
+.text-center {
+    width: 100%;
+}
+
+input[id=range-1] {
+    width: 1200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+  
+#lower {
+    z-index: 1;
+}
+  
+#upper {
+    z-index: 2;
+    opacity: 0.7;
+} 
+
+input[id=range-2] {
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.component {
+    display: grid;
+    justify-content: center;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3%;
+    box-shadow: 0px 0px 5px rgb(151, 151, 151);
+    padding: 70px 30px;
+    width: 1000px;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+table th, table td {
+    padding: 10px;
 }
 
 article {
@@ -51,28 +163,27 @@ article {
 .links {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px 0;
-  }
+}
   
-  .links a {
+.links a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s;
-  }
+}
   
-  .links a:hover {
+.links a:hover {
     color: #0077ff;
-  }
+}
 
-  .links a.active {
+.links a.active {
     color: #0077ff;
-  }
+}
 
-  .links a.active:hover {
+.links a.active:hover {
     color: #0093e2;
-  }
-
+}
 
 .gallery {
     display: flex;
@@ -83,7 +194,7 @@ article {
     gap: 20px;
 }
 
-.gallery>img {
+.gallery > img {
     width: calc((100% - 4 * 30px) / 4);
     border: 5px solid rgb(255, 255, 255);
     border-radius: 15px;
@@ -105,10 +216,13 @@ footer {
     flex-direction: column;
 }
 
-.container {
-    width: 70vw;
-    margin: 0 auto;
-    min-width: 926px;
-    min-height: 1600px;
-    font-size: 18px;
+@media (max-width: 600px) {
+    .component {
+        width: 350px;
+        padding: 20px;
+    }
+
+    .button1 {
+        width: 250px;
+    }
 }
