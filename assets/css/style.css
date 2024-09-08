@@ -1,25 +1,20 @@
-/* Сбрасываем отступы у body */
 body {
     margin: 0;
 }
 
-/* Определяем общий бокс-модель для всех элементов */
 * {
     box-sizing: border-box;
 }
 
-/* Стили для темной темы */
 body.dark-theme {
-    background-color: #222; /* Фон темной темы */
-    color: #fff; /* Цвет текста в темной теме */
+    background-color: #222;
+    color: #fff;
 }
 
-/* Стили для изображений */
 img {
-    border: 40px solid white; /* Белая рамка вокруг изображений */
+    border: 40px solid white;
 }
 
-/* Плавный переход для различных элементов */
 body, .navbar, header, .nav-link, .navbar-brand i {
     transition: all 0.8s ease;
 }
@@ -28,10 +23,9 @@ body, .navbar, header, .nav-link, .navbar-brand i {
     transition: all 0.5s ease;
 }
 
-/* Стили для заголовка */
 header {
-    background-color: #f7f7f7; /* Фон хедера */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.180); /* Нижняя граница хедера */
+    background-color: #f7f7f7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.180);
 }
 
 /* Навигационные ссылки (светлая тема) */
@@ -62,7 +56,6 @@ body.dark-theme .nav-link.active {
     color: #87ceeb; /* Цвет активной ссылки в темной теме */
 }
 
-/* Общие стили для контейнера */
 .container {
     min-width: 1000px;
     width: 70vw;
@@ -71,29 +64,24 @@ body.dark-theme .nav-link.active {
     font-size: 18px;
 }
 
-/* Стили для темной темы */
 .dark-theme-header {
     background-color: #000000;
     color: white;
     border-bottom-color: #333;
 }
 
-/* Стили текста и иконок в темной теме */
 .dark-theme-text {
     color: white;
 }
-
 .dark-theme-icon {
     color: white;
 }
 
-/* Стили кнопки переключения темы в темной теме */
 .dark-theme-button {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
-/* Стили для цветового селектора */
 #colorPicker {
     margin-left: 10px;
     margin-bottom: 10px;
@@ -102,25 +90,21 @@ body.dark-theme .nav-link.active {
     padding: 0px;
 }
 
-/* Стили для контейнера с частицами */
 #tsparticles {
     position: absolute;
     z-index: -1;
 }
 
-/* Основные стили для контейнера основного содержимого */
 main {
     display: grid;
     padding: 20px;
     justify-content: center;
 }
 
-/* Стили текста */
 p {
     font-size: 15px;
 }
 
-/* Стили текста с классом text */
 .text {
     font-size: 25px;
     color: black;
@@ -130,7 +114,6 @@ p {
     width: 100%;
 }
 
-/* Стили для диапазонов с id range-1 и range-2 */
 input[id=range-1] {
     width: 1200px;
     margin-left: 10px;
@@ -155,7 +138,6 @@ input[id=range-2] {
     margin-bottom: 10px;
 }
 
-/* Стили для компонента с классом component */
 .component {
     display: grid;
     justify-content: center;
@@ -166,22 +148,18 @@ input[id=range-2] {
     width: 1000px;
 }
 
-/* Стили для всех кнопок */
 button {
     margin-bottom: 10px;
 }
 
-/* Стили для ячеек таблиц */
 table th, table td {
     padding: 10px;
 }
 
-/* Стили для статьи */
 article {
     flex-grow: 1;
 }
 
-/* Стили для ссылок */
 .links {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px 0;
@@ -207,7 +185,6 @@ article {
     color: #0093e2;
 }
 
-/* Стили для галереи изображений */
 .gallery {
     display: flex;
     justify-content: space-around;
@@ -217,7 +194,7 @@ article {
     gap: 20px;
 }
 
-.gallery>img {
+.gallery > img {
     width: calc((100% - 4 * 30px) / 4);
     border: 5px solid rgb(255, 255, 255);
     border-radius: 15px;
@@ -225,14 +202,12 @@ article {
     margin-top: 10px;
 }
   
-/* Стили для футера */
 footer {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-/* Flexbox стили для flex-контейнера */
 .flex1 {
     display: flex;
     min-height: 80vh;
@@ -241,48 +216,13 @@ footer {
     flex-direction: column;
 }
 
-/* Стили для текста и заголовков */
-h1,p,.p1,a {
-    text-align: justify;
-    font-family: 'Mali';
-}
-
-.p1 {
-    text-align: justify;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-}
-
-h1 {
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-}
-
-/* Медиа-запрос для маленьких экранов */
-@media (max-width: 768px) {
-    .gallery > img {
-        width: calc((100% - 40px) / 2);
+@media (max-width: 600px) {
+    .component {
+        width: 350px;
+        padding: 20px;
     }
 
-    .container {
-        padding: 10px;
-    }
-
-    header {
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery > img {
-        width: 100%;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .navbar-toggler {
-        margin-bottom: 10px;
+    .button1 {
+        width: 250px;
     }
 }
