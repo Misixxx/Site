@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    margin-top: 10px;
+}
+
+h1,p,.p1,a {
+    text-align: justify;
+    font-family: 'Mali';
+}
+
+.p1 {
+    text-align: justify;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+
+header > a:first-child {
+    font-size: 40px;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+article {
+    flex-grow: 1;
+}
+
+.links {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 0;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .links a:hover {
+    color: #0077ff;
+  }
+
+  .links a.active {
+    color: #0077ff;
+  }
+
+  .links a.active:hover {
+    color: #0093e2;
+  }
+
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.gallery>img {
+    width: calc((100% - 4 * 30px) / 4);
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    margin-top: 10px;
+}
+  
+footer {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.flex1 {
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+    min-width: 926px;
+    min-height: 1600px;
+    font-size: 18px;
+}
