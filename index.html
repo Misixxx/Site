@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misixx</title>
+    <title>Кулінарія</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/site-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -15,20 +17,20 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-drumstick-bite fa-xl"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Головна</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Examples</a>
+                            <a class="nav-link" href="./page-recepty.html">Рецепти</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="./page-inne.html">Інше</a>
                         </li>
                     </ul>
                     <button id="themeToggle" class="btn btn-outline-secondary">
@@ -38,17 +40,338 @@
         </nav>
     </header>
     <main class="container">
-        <div class="component">
-             <h1>Вгадайка :)</h1>
-             <p>Вгадайте число від 1 до 100:</p>
-             <img id="resultImage" src="./assets/images/question-mark.png" alt="">
-             <p>Раунд: <span id="roundNumber">0</span>/<span id="totalRounds">10</span></p>
-             <input class="form-control" id="guessInput" placeholder="Введіть число">
-            <form>
-                <button type="button" class="btn btn-primary" onclick="guessNumber()">Спробувати</button>
-                <div id="result"></div>                
-            </form>
-        </div>
+        <div class="container">	
+			<div class="wrap d-flex flex-column">
+					<main class="flex-grow-1">
+						<h1 class="p-1">Кулінарний щоденник</h1>
+						<p class="text-justify">Lorem ipsum dolor ...</p>
+						<div class="card">
+						<div class="d-flex flex-wrap gap-3">
+							<div class="CARD p-2 shadow col">
+								<img src="./assets/images/borsh.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Борщ з пампушками</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Борщ з пампушками — традиційна українська страва на основі буряка, капусти, картоплі та м'яса, яка подається гарячою зі сметаною. До борщу часто подають пампушки — м'які булочки з часниковою заправкою, що надають особливого аромату й смаку.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+							<div class="CARD p-2 shadow col">
+								<img src="./assets/images/golubki.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Голубці</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Голубці — це традиційна українська страва, що складається з м'ясного або овочевого начинки, загорнутої у варені капустяні листки. Начинка часто містить м'ясний фарш (свинину, яловичину або курку), рис, цибулю та спеції. Голубці готуються шляхом тушкування у томатному соусі або з овочевим бульйоном до повної готовності. Це ситна і смачна страва, яка є популярною в багатьох країнах Східної Європи.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/Cholodec.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Холодець</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Холодець — це традиційна холодна закуска, що готується з м'яса, яке вариться до стану желе. Основні інгредієнти включають свинячі або яловичі м'ясні частини (наприклад, свинячі ніжки, вуха або окіст), які довго варять з овочами і спеціями. Після варіння бульйон охолоджується, що дозволяє йому загуснути до консистенції желе. Холодець часто подається з гірчицею, хріном або часниковим соусом і є популярною стравою на святкових столах в Україні та інших країнах Східної Європи.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+							<div class="w-100"></div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/kotleta.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Котлета по-київськи</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Котлета по-київськи — це популярна українська страва, що складається з курячого філе, начиненого вершковим маслом з зеленню та спеціями. Куряче філе обвалюється у панірувальних сухарях і смажиться до золотистої скоринки. Після приготування котлета має ніжний, соковитий внутрішній начинковий шар, який створює неповторний смаковий ефект. Це класичний варіант святкової або ресторанної кухні.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/kapustnak.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Капусняк</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Капусняк — це традиційний український суп на основі квашеної капусти. Готується з м'ясного бульйону (свинячого, яловичого або курячого), до якого додається квашена капуста, картопля, морква, цибуля, і часто м'ясо або ковбаса. Суп має характерний кислуватий смак завдяки квашеній капусті і часто подається зі сметаною і свіжою зеленню. Капусняк є популярною стравою у зимовий період і відомий своєю ситністю та насиченістю.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/Banosh.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Банош</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Банош -в'язка кукурудзяна каша, зварена на вершках або сметані, заправлена шкварками, грибами та бринзою тощо. Страва української національної кухні, поширена в карпатському регіоні, зокрема, належить до гуцульської кухні.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+									
+								</div>
+								</div>
+							</div>
+                            <div class="w-100"></div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/deruny.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Деруни</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Деруни-картопляні млинці, мають велику популярність в українській, польській, білоруській, чеській, словацькій, болгарській, австрійській та німецькій кухнях, в Україні особливо поширені в північних і західних районах.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/kulish.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Куліш</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Куліш традиційна народна українська страва з пшона, зварена на м’ясній юшці або воді, яку затирають салом із цибулею і часником. Куліш за способом приготування схожий на крупник, але готується переважно з пшона. Його легко готувати в домашніх та польових умовах.</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="./assets/images/shpundra.png" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Шпундра</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+                                    <i style="color: #ffae00f1;" class="fa-regular fa-star"></i>
+								</div>
+                                <div>
+                                    <p1>Шпундра давня українська народна страва. Для приготування цієї страви зазвичай використовується смажена свинина (підчеревина чи грудина), тушкована із буряками в буряковому квасі. Шпундра дуже нагадує верещаку, але, на відміну від неї, шпундру заправляли не сухарями, а борошном або запареним тертим пшоном</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <!-- <div class="w-100"></div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="w-100"></div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div>
+                            <div class="CARD p-2 shadow col">
+								<img src="" class="card-img-top" alt="">
+								<div class="card-body">
+								<h5 class="card-title">Назва</h5>
+								<div>
+                                    <p3><b>Складність</b></p3>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star"></i>
+									<i style="color: #ffae00f1;" class="fa-solid fa-star-half-stroke"></i>
+								</div>
+                                <div>
+                                    <p1>Опис</p1>
+                                </div>
+								<div>
+									<button class="btn bg-dark text-white">Дивитись рецепт</button>
+									<button class="btn bg-secondary-subtle  border-4 rounded"><i class="fa-solid fa-heart"></i></button>
+								</div>
+								</div>
+							</div> -->
+						</div>
+						</div>
+					</main>
+			</div>
+		</div>	
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

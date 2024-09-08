@@ -137,18 +137,6 @@ footer {
     font-size: 18px;
 }
 
-@media (max-width: 600px) {
-
-    .button1 {
-        width: 250px;
-    }
-
-    input#phone {
-        width: 250px;
-    }
-
-}
-
 body {
     margin: 0;
 }
@@ -182,6 +170,13 @@ button {
 
 img {
     width: 300px;
+}
+
+.card>img {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+
 }
 
 @media (max-width: 600px) {
