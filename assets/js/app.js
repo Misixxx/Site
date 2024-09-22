@@ -1,5 +1,5 @@
-// Темна тема
-document.getElementById('themeToggle').addEventListener('click', function() {
+// Функция для применения темы
+function applyTheme(theme) {
   let body = document.body;
   let navbar = document.querySelector('.navbar');
   let header = document.querySelector('header');
@@ -9,24 +9,43 @@ document.getElementById('themeToggle').addEventListener('click', function() {
   let cardBodies = document.querySelectorAll('.card-body');
   let imgTheme = document.querySelectorAll('.img-theme');
   let themeIcon = document.getElementById('themeIcon');
-  body.classList.toggle('dark-theme');
-  navbar.classList.toggle('dark-theme-navbar');
-  header.classList.toggle('dark-theme-header');
-  navLinks.forEach(navLink => navLink.classList.toggle('dark-theme-text'));
-  navbarBrandIcon.classList.toggle('dark-theme-icon');
-  themeToggle.classList.toggle('dark-theme-button');
-  imgTheme.forEach(img => img.classList.toggle('img-theme-dark'));
-  cardBodies.forEach(cardBody => cardBody.classList.toggle('card-body-theme'));
-  if (body.classList.contains('dark-theme')) {
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
+
+  if (theme === 'dark') {
+    body.classList.add('dark-theme');
+    navbar.classList.add('dark-theme-navbar');
+    header.classList.add('dark-theme-header');
+    navLinks.forEach(navLink => navLink.classList.add('dark-theme-text'));
+    navbarBrandIcon.classList.add('dark-theme-icon');
+    themeToggle.classList.add('dark-theme-button');
+    imgTheme.forEach(img => img.classList.add('img-theme-dark'));
+    cardBodies.forEach(cardBody => cardBody.classList.add('card-body-theme'));
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
   } else {
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
+    body.classList.remove('dark-theme');
+    navbar.classList.remove('dark-theme-navbar');
+    header.classList.remove('dark-theme-header');
+    navLinks.forEach(navLink => navLink.classList.remove('dark-theme-text'));
+    navbarBrandIcon.classList.remove('dark-theme-icon');
+    themeToggle.classList.remove('dark-theme-button');
+    imgTheme.forEach(img => img.classList.remove('img-theme-dark'));
+    cardBodies.forEach(cardBody => cardBody.classList.remove('card-body-theme'));
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+  }
+}
+
+// Проверка темы при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
   }
 });
-// Колір фона
-document.getElementById('colorPicker').addEventListener('input', function() {
-  document.body.style.backgroundColor = this.value;
-});
 
+// Сохранение и переключение темы
+document.getElementById('themeToggle').addEventListener('click', function() {
+  const currentTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+  applyTheme(currentTheme);
+  localStorage.setItem('theme', currentTheme);
+});
