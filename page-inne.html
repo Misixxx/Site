@@ -14,31 +14,42 @@
 </head>
 <body>
     <div id="tsparticles"></div>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="fa-solid fa-drumstick-bite fa-xl"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.html">Головна</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./page-recepty.html">Рецепти</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Розробники</a>
-                        </li>
-                    </ul>
-                    <button id="themeToggle" class="btn btn-outline-secondary">
-                        <i id="themeIcon" class="fas fa-moon"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
+	<header>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><i class="fa-solid fa-drumstick-bite fa-xl"></i></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="./index.html">Головна</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./page-recepty.html">Рецепти</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link  active" href="#"><b>Розробники</b></a>
+						</li>
+					</ul> 					
+	
+					<!-- Поле поиска (по умолчанию скрыто) -->
+					<input id="searchInput" type="text" class="form-control" placeholder="Пошук страви" aria-label="Пошук страви" aria-describedby="basic-addon2" style="max-width: 200px; margin-right: 10px; display: none;">
+					
+					<!-- Кнопка переключения темы -->
+					<button id="themeToggle" class="btn btn-outline-secondary me-2">
+						<i id="themeIcon" class="fas fa-moon"></i>
+					</button>
+	
+					<!-- Кнопка поиска -->
+					<button id="searchToggle" class="btn btn-outline-secondary">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+	</header>
     <main class="container">
         <div class="container">	
 			<div class="wrap d-flex flex-column">

@@ -11,7 +11,6 @@ body.dark-theme {
     color: #fff;
 }
 
-
 body, .navbar, header, .nav-link, .navbar-brand i {
     transition: all 0.8s ease;
 }
@@ -23,6 +22,8 @@ body, .navbar, header, .nav-link, .navbar-brand i {
 header {
     background-color: #f7f7f7;
     border-bottom: 1px solid rgba(0, 0, 0, 0.180);
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.171);
 }
 
 /* Навигационные ссылки (светлая тема) */
@@ -32,25 +33,28 @@ header {
     transition: color 0.3s; /* Плавный переход цвета */
 }
 
+/* Светлая тема (по умолчанию) */
 .nav-link:hover {
-    color: #0077ff; /* Цвет при наведении */
+    color: #9ec9fa !important; /* Цвет при наведении в светлой теме */
 }
 
 .nav-link.active {
-    color: #0093e2; /* Цвет активной ссылки */
+    color: #3292ff !important; /* Цвет активной ссылки в светлой теме */
+}
+
+
+/* Темная тема */
+body.dark-theme .nav-link:hover {
+    color: #9ec9fa !important; /* Цвет при наведении в темной теме */
+}
+
+body.dark-theme .nav-link.active {
+    color: #3292ff !important; /* Цвет активной ссылки в темной теме */
 }
 
 /* Навигационные ссылки (темная тема) */
 body.dark-theme .nav-link {
-    color: #fff; /* Основной цвет ссылок в темной теме */
-}
-
-body.dark-theme .nav-link:hover {
-    color: #f0f0f0; /* Цвет при наведении в темной теме */
-}
-
-body.dark-theme .nav-link.active {
-    color: #87ceeb; /* Цвет активной ссылки в темной теме */
+    color: #fff !important; /* Основной цвет ссылок в темной теме */
 }
 
 .dark-theme-header {
@@ -58,7 +62,76 @@ body.dark-theme .nav-link.active {
     color: white;
     border-bottom-color: #333;
 }
+  
+  /* Темная тема для кнопки поиска */
+  body.dark-theme #searchButton {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  body.dark-theme #themeToggle {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
 
+
+#searchInput {
+    transition: all 0.3s ease; /* Плавный переход при показе/скрытии */
+}
+
+  /* Стили для кнопки переключения темы */
+#themeToggle {
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+/* Подсветка кнопки в темной теме */
+body.dark-theme #themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Подсветка фона при наведении */
+    color: white; /* Цвет текста при наведении */
+    border: black; /* Убираем обводку при наведении */
+}
+
+  /* Отступ между кнопками */
+#searchToggle {
+    margin-left: 10px;
+  }
+
+  
+  /* Стили для темной темы */
+  body.dark-theme .btn-outline-secondary {
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark-theme #searchToggle {
+    background-color: white;
+    color: black;
+  }
+  
+  body.dark-theme #themeToggle {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Переходы при смене темы */
+  .btn-outline-secondary, .btn-outline-secondary:hover {
+    transition: all 0.5s ease;
+  }
+
+  /* Стили для активной кнопки поиска */
+#searchToggle.active {
+  background-color: #007bff; /* Синий фон при активном состоянии */
+  color: white;              /* Белый текст */
+  border-color: #007bff;     /* Синяя граница */
+}
+
+/* Стили для темной темы, когда кнопка активна */
+body.dark-theme #searchToggle.active {
+  background-color: #ffae00; /* Оранжевый фон в темной теме */
+  color: black;              /* Черный текст */
+  border-color: #ffae00;     /* Оранжевая граница */
+}
+  
 .dark-theme-text {
     color: white;
 }
@@ -69,11 +142,6 @@ body.dark-theme .nav-link.active {
 .dark-theme-button {
     background-color: rgb(255, 255, 255);
     color: black;
-}
-
-#tsparticles {
-    position: absolute;
-    z-index: -1;
 }
 
 p {
@@ -137,15 +205,6 @@ footer {
     font-size: 18px;
 }
 
-body {
-    margin: 0;
-}
-
-header {
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.171);
-}
-
 main {
     display: grid;
     padding: 20px;
@@ -157,15 +216,76 @@ p {
 }
 
 button {
-    margin-top: 10px;
+    margin-bottom: 9px;
     padding: 8px 16px;
     font-size: 16px;
     cursor: pointer;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
+
+
+
+
+/* Стили для кнопки "Дивитись рецепт" */
+
+/* Базовый стиль для кнопки "Дивитись рецепт" */
+.btn.bg-dark {
+    background-color: #007bff; /* Цвет кнопки в светлой теме */
+    color: white; /* Цвет текста в светлой теме */
+    border: none; /* Без границы */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    padding: 10px 20px; /* Отступы для кнопки */
+    border-radius: 4px; /* Закругление углов кнопки */
+}
+
+/* Подсветка при наведении в светлой теме */
+.btn.bg-dark:hover {
+    background-color: #007bff !important; /* Цвет кнопки при наведении в светлой теме */
+}
+
+/* Темная тема */
+.dark-theme .btn.bg-dark {
+    background-color: #495057 !important; /* Цвет кнопки в темной теме */
+    color: white; /* Цвет текста в темной теме */
+}
+
+/* Подсветка при наведении в темной теме */
+.dark-theme .btn.bg-dark:hover {
+    background-color: #0056b3 !important; /* Цвет кнопки при наведении в темной теме */
+}
+
+
+
+
+
+/* Стили для кнопки лайка */
+.btn.bg-secondary-subtle {
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Без границы */
+    cursor: pointer; /* Указатель при наведении */
+    transition: color 0.3s; /* Плавный переход */
+}
+
+.btn.bg-secondary-subtle:hover {
+    color: #646363; /* Цвет сердечка при наведении */
+}
+
+.btn.bg-secondary-subtle.red {
+    color: red; /* Красный цвет сердечка при нажатии */
+}
+
+/* Анимация нажатия */
+.btn.bg-secondary-subtle:active {
+    transform: scale(0.9); /* Уменьшение кнопки при нажатии */
+    transition: transform 0.1s; /* Плавный переход при нажатии */
+}
+
+.btn.bg-secondary-subtle {
+    color: #333; /* Цвет текста по умолчанию */
+}
+
+.btn.bg-secondary-subtle.active {
+    color: red; /* Цвет текста при активной кнопке */
 }
 
 img {
@@ -175,18 +295,71 @@ img {
 .card>img {
     width: 100%;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 3px;
 
 }
 
-@media (max-width: 600px) {
+.card {
+    background-color: white; /* Основной фон карточки */
+    border: 1px solid #ccc; /* Светлая рамка по умолчанию */
+    transition: background-color 0.3s, border-color 0.3s; /* Плавный переход для изменений */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Эффект тени */
+}
 
-    .button1 {
-        width: 250px;
+.card-body-theme {
+    background-color: #333; /* Темный фон карточки в темной теме */
+    color: white; /* Цвет текста в темной теме */
+}
+
+/* Стиль для темной темы */
+.dark-theme .card {
+    background-color: #333; /* Темный фон карточки */
+    border-color: black; /* Черная рамка */
+}
+
+.card-body div {
+    display: flex; /* Используем flexbox для выравнивания */
+    margin-bottom: 5px; /* Отступ между элементами */
+}
+
+.card-body div i {
+ margin-top: 5px;
+}
+
+.card-body div p {
+    margin-right: 5px;
+}
+
+.card-body p {
+    font-size: 16px; /* Уменьшение размера текста */
+    white-space: normal; /* Текст может переноситься на несколько строк */
+    overflow: hidden; /* Скрыть переполнение */
+    text-overflow: ellipsis; /* Точки в конце текста */
+}
+
+
+.card-body div {
+    overflow: hidden;           /* Скрывает лишний текст */
+    text-overflow: ellipsis;   /* Добавляет многоточие (...) */
+    white-space: nowrap;        /* Запрещает перенос строк */
+    max-width: 100%;           /* Устанавливает максимальную ширину */
+}
+
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 1 100%; /* 1 карточка в ряду */
     }
+}
 
-    input#phone {
-        width: 250px;
+@media (min-width: 577px) and (max-width: 768px) {
+    .card {
+        flex: 1 1 45%; /* 2 карточки в ряду */
     }
+}
 
+@media (min-width: 769px) {
+    .card {
+        flex: 1 1 30%; /* 3 карточки в ряду */
+    }
 }
